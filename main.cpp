@@ -3,7 +3,7 @@
 #include <chrono>
 #include "Functions.h"
 
-//g++ main.cpp Functions.cpp -o turnBasedRpg, This command is for compile usage only, delete on when this program is complete.
+//This program isn't finished yet
 
 int main()
 {
