@@ -3,7 +3,7 @@
 #include <chrono>
 #include "Functions.h"
 
-//This program isn't finished yet
+//g++ main.cpp Functions.cpp -o turnBasedRpg, This command is for compile usage only, delete on when this program is complete.
 
 int main()
 {
@@ -14,8 +14,8 @@ int main()
     2. The program must include bitwise logic operators.
     */
 
-    std::cout << "Sample title message. Valid only on startup.";
-    std::cout << "\n--------------------------------------------------\n";
+    std::cout << "Sample title message. Valid only on startup.\n"
+              << "------------------------------------------------------------\n";
     
 
     PlayerMenu player;
@@ -45,15 +45,15 @@ int main()
         }
         if(player_choice == 4)
         {
-            std::cout << "------------------------------------------------------------\n"
-                      << "Ending... See you next time!\n"
-                      << "------------------------------------------------------------\n" << std::endl;
+            std::cout << "Ending... See you next time!\n"
+                      << "------------------------------------------------------------" << std::endl;
             std::this_thread::sleep_for(std::chrono::seconds(2));
 
         }
         else
         {
             std::cout << "Congradulations for finding this bug! Please feel free to report this bug to the creator.\n";
+            std::this_thread::sleep_for(std::chrono::seconds(4));
         }
     } while (player_choice != 4);
     
