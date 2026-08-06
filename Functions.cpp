@@ -9,22 +9,22 @@ short PlayerMenu::inputValidation()
     {
         std::cin.clear();
         std::cin.ignore(1000, '\n');
-        std::cout << "--------------------------------------------------\n"
+        std::cout << "------------------------------------------------------------\n"
                   << "That option isn't available, please try again by inputing a number.\n";
 
     }
 
-    std::cout << "--------------------------------------------------\n";
+    std::cout << "------------------------------------------------------------\n";
     return user_input;
 }
 short PlayerMenu::mainMenu()
 {
-    std::cout << "--------------------------------------------------\n"
+    std::cout << "------------------------------------------------------------\n"
               << "1. Level selection\n"
               << "2. Skill Tree\n"
               << "3. Shop\n"
               << "4. Exit game\n";
-    std::cout << "--------------------------------------------------\n";
+    std::cout << "------------------------------------------------------------\n";
 
     short user_input = inputValidation();
 
@@ -32,9 +32,9 @@ short PlayerMenu::mainMenu()
 }
 void PlayerMenu::levelSelect()
 {
-    std::cout << "--------------------------------------------------\n"
+    std::cout << "------------------------------------------------------------\n"
               << "Please select from the following levels, by typing the level number.\n"
-              << "--------------------------------------------------\n"
+              << "------------------------------------------------------------\n"
               << "[Level 1] Whispering Plains\n"
               << "[Level 2] Goblin Camp Invasion\n"
               << "[Level 3] Maw Of The Mountain\n"
@@ -45,16 +45,26 @@ void PlayerMenu::levelSelect()
               << "[Level 8] Sancutary Visit\n"
               << "[Level 9] Chared scorched forest\n"
               << "[Level 10] Path Of The Flames\n";
-    std::cout << "--------------------------------------------------\n";
+    std::cout << "------------------------------------------------------------\n";
 }
 void PlayerMenu::skillTreeMenu()
 {
-    std::cout << "--------------------------------------------------\n";
-    
-    if(current_skills == 1)
+    std::cout << "------------------------------------------------------------\n"
+              << "Which skill would you like to look at?\n"
+              << "[1] heal\n";
+    if(current_spells == heal | fire_ball)
     {
-        
+        std::cout << "[2] fire ball";
     }
+    if(current_spells == heal | blizzard)
+    {
+        std::cout << "How is it";
+    }
+    else if(current_spells == heal | lightning_bolt)
+    {
+        std::cout << "Feel the wrath of me";
+    }
+    std::cout << "Try me.";
 }
 void PlayerMenu::combat()
 {
